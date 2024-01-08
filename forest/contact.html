@@ -66,15 +66,20 @@
         <section class="contact-section center">
             <h2 class="section-title">Formularz kontaktowy</h2>
             <div class="wrapper center">
-                <form class="contact-section__form">
+                <div class="contact-section__form">
+                    <p class="contact-section__form__error">Uzupełnij wszystkie dane!</p>
                     <label for="name">Imię:</label>
-                    <input type="text" name="name">
+                    <input class="contact-section__form__input contact-section__form__input--name" type="text" placeholder="Podaj swoje imię">
                     <label for="email">E-mail</label>
-                    <input type="text" name="email">
+                    <input class="contact-section__form__input contact-section__form__input--email" type="text" placeholder="Podaj swój email">
                     <label for="message">Wiadomość:</label>
-                    <textarea name="message" id="" cols="30" rows="10"></textarea>
-                    <button type="submit" aria-label="Wyślij">Wyślij</button>
-                </form>
+                    <textarea class="contact-section__form__textarea" cols="30" rows="10" placeholder="Zostaw swoją wiadomość"></textarea>
+                    <div class="privacy">
+                        <input type="checkbox" class="privacy__checkbox">
+                        <p class="privacy__description">Zgadzam się na przetwarzanie moich danych osobowych zgodnie z Polityką Prywatności Forest Group dostępnej na stronie <a href="#">forest-group.pl/rodo</a>. Zaznaczenie tego pola oznacza zapoznanie się z jej treścią.</p>
+                    </div>
+                    <button type="submit" aria-label="Wyślij" class="contact-section__form__btn">Wyślij</button>
+                </div>
             </div>
         </section>
         <section class="contact-map center">
@@ -129,4 +134,5 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./dist/js/main.min.js"></script>
+    <script src="./dist/js/form.min.js"></script>
 </body>
