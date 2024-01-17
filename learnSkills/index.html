@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RPGLife</title>
+  <script type="module" crossorigin src="/assets/index-MQQk3zgX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-D8b0CH_l.css">
+</head>
+
+<body onload="load()">
+  <div class="app">
+    <div class="person-info">
+      <img src="/assets/1-GYjzfCkH.jpg" class="person-info__img">
+      <div class="person-info__wrap">
+        <p class=" person-info__name">Bartosz Widlak</p>
+        <p class="person-info__total">Total hours: <span class="person-info__hours">0</span> h</p>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="stats">
+      <div class="stats__wrap">
+        <h2 class="stats__name">Matematyka</h2>
+        <div class="stats__box">
+          <button class="stats__minus" value="matematyka" onclick="minus('matematyka')">-</button>
+          <p class="stats__total matematyka">23</p>
+          <button class="stats__add" value="matematyka" onclick="plus('matematyka')">+</button>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="stats__wrap">
+        <h2 class="stats__name">Programowanie</h2>
+        <div class="stats__box">
+          <button class="stats__minus" value="programowanie" onclick="minus('programowanie')">-</button>
+          <p class="stats__total programowanie">23</p>
+          <button class="stats__add" value="programowanie" onclick="plus('programowanie')">+</button>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="stats__wrap">
+        <h2 class="stats__name">Sport</h2>
+        <div class="stats__box">
+          <button class="stats__minus" value="sport" onclick="minus('sport')">-</button>
+          <p class="stats__total sport">23</p>
+          <button class="stats__add" value="sport" onclick="plus('sport')">+</button>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="stats__wrap">
+        <h2 class="stats__name">Angielski</h2>
+        <div class="stats__box">
+          <button class="stats__minus" value="angielski" onclick="minus('angielski')">-</button>
+          <p class="stats__total angielski">23</p>
+          <button class="stats__add" value="angielski" onclick="plus('angielski')">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
