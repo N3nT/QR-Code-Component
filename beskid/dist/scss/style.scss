@@ -1,0 +1,228 @@
+@use 'colors.scss' as *;
+@use 'components.scss' as *;
+@use 'numbers.scss' as *;
+@use 'media.scss' as *;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 66.5%;
+	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
+}
+.swiper {
+	width: 350px;
+	height: 300px;
+	display: flex;
+	margin-top: $gallery-wrap-mtop;
+	justify-content: center;
+	border-radius: $b-radius;
+	&-slide{
+		&-img{
+			width: 100%;
+			height: 100%;
+			border-radius: $b-radius;
+		}
+	}
+  }
+main {
+	background-color: $black;
+}
+.top {
+	background-size: cover;
+	height: 100vh;
+}
+.nav {
+	padding-top: $nav_pad_top;
+	.wrapper {
+		justify-content: space-between;
+		flex-direction: row;
+	}
+	&__logo {
+		font-size: $f2;
+		color: $white;
+		span {
+			color: $black;
+		}
+	}
+	&__wrap {
+		&-list {
+			display: flex;
+			list-style: none;
+		}
+		&-item {
+			padding-left: $nav-wrap-item-pleft;
+			font-size: $f4;
+			text-transform: uppercase;
+			a {
+				color: $white;
+				text-decoration: none;
+				transition: color 0.3s;
+				&:hover {
+					color: $gray;
+				}
+			}
+		}
+	}
+}
+.about {
+	&__text {
+		margin-top: $about-text-mtop;
+		text-align: center;
+		font-size: $f3;
+		color: $gray;
+	}
+	&__wrap {
+		display: flex;
+		margin-top: $about-wrap-mtop;
+		width: $about-wrap-width;
+		&-img {
+			width: $about-img-width;
+			height: $about-img-height;
+			border-radius: $b-radius;
+		}
+		&-list {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: $about-wrap-list-pleft;
+			width: $about-wrap-list-width;
+			font-size: $f4;
+			text-align: center;
+			&-item {
+				padding: $about-wrap-list-item-p;
+				transition: color 0.3s;
+				cursor: pointer;
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+.location {
+	&__wrap {
+		display: flex;
+		margin-top: $location-wrap-mtop;
+	}
+	&__text {
+		padding: $location-text-p;
+		width: $location-text-width;
+		font-size: $f4;
+		color: $gray;
+		text-align: center;
+	}
+	&__img {
+		width: $location-img-width;
+		img {
+			width: $location-img-img-width;
+		}
+	}
+}
+.gallery {
+	height: $gallery-height;
+	.fa-solid {
+		color: $white;
+	}
+	&__wrap {
+		display: none;
+		position: relative;
+		margin-top: $gallery-wrap-mtop;
+		width: $gallery-wrap-width;
+		align-items: center;
+		justify-content: space-between;
+		&-mid {
+			width: $gallery-wrap-mid-width;
+			height: $gallery-wrap-mid-height;
+			border: 1px solid $gray;
+			border-radius: $b-radius;
+			z-index: 2;
+		}
+		&-left,
+		&-right {
+			font-size: $f1;
+		}
+		&-asideleft,
+		&-asideright {
+			position: absolute;
+			width: $aside-width;
+			height: $aside-height;
+			z-index: 1;
+			border: 1px solid $gray;
+		}
+		&-asideleft {
+			top: $aside-top-px;
+			left: $aside-left-left;
+		}
+		&-asideright {
+			top: $aside-top-px;
+			left: $aside-right-left;
+		}
+	}
+}
+.footer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: $footer-height;
+	background-color: $accent-two;
+	&__wrap {
+		display: flex;
+		width: $footer-wrap-width;
+		justify-content: space-between;
+		&-mid {
+			display: flex;
+			flex-direction: column;
+			padding: $footer-wrap-mid-padding;
+			align-items: center;
+			justify-content: center;
+			h3 {
+				font-size: $f4;
+				color: $white;
+			}
+			p {
+				font-size: $f6;
+				color: $gray;
+			}
+		}
+		&-left,
+		&-right {
+			display: flex;
+			list-style: none;
+			color: $gray;
+			li {
+				padding: $footer-wrap-li-padding;
+				font-size: $f5;
+				// &:first-child,&:last-child{
+				// 	padding: 0;
+				// }
+			}
+		}
+	}
+	&__text {
+		color: $gray;
+		text-align: center;
+		font-size: $f6;
+	}
+}
+
+//media
+@media screen and (min-width: 375px) {
+	@include media-375px;
+}
+@media screen and (min-width: 576px) {
+	@include media-576px;
+}
+@media screen and (min-width: 768px){
+	@include media-768px;
+}
+@media screen and (min-width: 992px){
+	@include media-992px;
+}
+@media screen and (min-width: 1200px){
+	@include media-1200px;
+}

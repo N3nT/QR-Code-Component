@@ -1,0 +1,220 @@
+@use 'numbers.scss' as *;
+
+@mixin media-375px {
+	//components
+	.wrapper {
+		width: 375px;
+	}
+
+	//main
+	.top {
+		background-image: url(./img/mountain-8120620_1920.jpg);
+		background-position: center;
+	}
+	.nav {
+		.wrapper {
+			justify-content: space-around;
+			padding: 0 0.5em;
+		}
+		&__logo {
+			font-size: $f3;
+		}
+		&__wrap {
+			&-item {
+				font-size: $f6;
+			}
+		}
+	}
+	.about {
+		&__text {
+			text-align: center;
+			font-size: $f5;
+			padding: 1em;
+		}
+		&__wrap {
+			margin-top: 5em;
+			&-img {
+				width: 100%;
+				padding: 1em;
+			}
+			&-list {
+				display: none;
+			}
+		}
+	}
+	.location {
+		&__wrap {
+			flex-direction: column-reverse;
+			padding: 1em;
+		}
+		&__text {
+			width: 100%;
+			padding: 0;
+			margin-top: 3em;
+			font-size: $f5;
+		}
+		&__img {
+			width: 100%;
+			margin-top: 2em;
+		}
+	}
+	.footer {
+		&__wrap {
+			flex-direction: column-reverse;
+			align-items: center;
+			&-right {
+				display: none;
+			}
+		}
+	}
+}
+@mixin media-576px {
+	.wrapper {
+		width: 550px;
+	}
+	.swiper {
+		width: 500px;
+	}
+}
+@mixin media-768px {
+	.wrapper {
+		width: 740px;
+	}
+	.nav {
+		&__logo {
+			font-size: $f3;
+		}
+		&__wrap {
+			&-item {
+				font-size: $f5;
+			}
+		}
+	}
+	.about {
+		&__text {
+			font-size: $f4;
+		}
+        &__wrap{
+            &-img{
+                height: 400px;
+            }
+        }
+	}
+    .location{
+        &__text{
+            font-size: $f4;
+        }
+    }
+	.gallery{
+		height: 550px;
+	}
+    .swiper{
+        width: 600px;
+        height: 350px;
+    }
+    .footer{
+		align-items: center;
+		&__wrap{
+			flex-direction: column;
+			&-right{
+				display: flex;
+				order: 2;
+			}
+			&-mid{
+				order: 1;
+			}
+			&-left{
+				order: 3;
+			}
+			&-right,&-left{
+				li{
+					padding: 1em;
+				}
+			}
+		}
+	}
+}
+@mixin media-992px{
+	.wrapper{
+		width: 992px;
+	}
+	.top{
+		background-size: cover;
+	}
+	.about{
+		&__wrap{
+			&-img{
+				height: 600px;
+			}
+		}
+	}
+	.gallery{
+		height: 600px;
+	}
+	.footer{
+		&__wrap{
+			flex-direction: row;
+			&-right{
+				display: flex;
+				order: 3;
+			}
+			&-mid{
+				order: 2;
+			}
+			&-left{
+				order: 1;
+			}
+		}
+	}
+}
+@mixin media-1200px{
+	.wrapper{
+		width: 1200px;
+	}
+	.nav{
+		&__logo{
+			font-size: $f2;
+		}
+		&__wrap{
+			&-item{
+				font-size: $f4;
+			}
+		}
+	}
+	.about{
+		&__wrap{
+			&-img {
+				width: $about-img-width;
+				height: $about-img-height;
+				border-radius: $b-radius;
+			}
+			&-list {
+				display: flex;
+			}
+		}
+	}
+	.location{
+		&__wrap{
+			flex-direction: row;
+		}
+		&__text {
+			padding: $location-text-p;
+			width: $location-text-width;
+			font-size: $f4;
+			text-align: center;
+		}
+		&__img {
+			width: $location-img-width;
+			img {
+				width: $location-img-img-width;
+			}
+		}
+	}
+	.gallery{
+		height: 700px;
+	}
+	.swiper{
+		width: 800px;
+		height: 500px;
+	}
+}
