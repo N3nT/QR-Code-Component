@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+  <div class="successful-wrap">
+    <p class="successful-wrap__first-line"><img src="./assets/images/icon-success-check.svg">Message Sent!</p>
+    <p class="successful-wrap__second-line">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <div class="form-wrap">
+    <h1 class="form-wrap__title">Contact Us</h1>
+    <div class="form-wrap__person-wrap">
+      <div class="form-wrap__person-wrap__name-wrap">
+        <label for="name">First Name *</label>
+        <input type="text" id="name" class="line-input name-input">
+        <p class="error-label name-error">This field is required</p>
+      </div>
+      <div class="form-wrap__person-wrap__lastname-wrap">
+        <label for="lastname">Last Name *</label>
+        <input type="text" id="lastname" class="line-input lastname-input">
+        <p class="error-label lastname-error">This field is required</p>
+      </div>
+    </div>
+    <div class="form-wrap__email-wrap">
+      <label for="email">Email Address *</label>
+      <input type="text" id="email" class="line-input email-input">
+      <p class="error-label email-error"></p>
+    </div>
+    <div class="form-wrap__query-wrap">
+      <label for="query">Query Type *</label>
+      <div class="form-wrap__query-wrap__querys">
+        <div class="form-wrap__query-wrap__querys__query">
+          <input type="radio" name="query-type" class="form-wrap__query-wrap__querys__query--radio enquiry-radio">
+          <p>General Enquiry</p>
+        </div>
+        <div class="form-wrap__query-wrap__querys__query">
+          <input type="radio" name="query-type" class="form-wrap__query-wrap__querys__query--radio support-radio">
+          <p>Support Request</p>
+        </div>
+      </div>
+      <p class="error-label query-error">Please select a query type</p>
+    </div>
+    <div class="form-wrap__message-wrap">
+      <label for="message">Message *</label>
+      <textarea id="message" class="text-area"></textarea>
+      <p class="error-label message-error">This field is required</p>
+    </div>
+    <div class="form-wrap__rule-wrap">
+      <div class="form-wrap__rule-wrap__checkbox-wrap">
+        <input type="checkbox" class="form-wrap__rule-wrap__checkbox-wrap--checkbox rule-checkbox">
+        <p class="form-wrap__rule-wrap__checkbox-wrap__label">I consent to being contacted by the team *</p>
+      </div>
+      <p class="error-label rule-error">To submit this form, please consent to being contacted</p>
+    </div>
+    <button class="form-wrap__submit">Submit</button>
+  </div>
+</body>
+<script src="./js/script.js"></script>
+
+</html>
