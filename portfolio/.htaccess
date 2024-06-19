@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond $1 !^([a-zA-z0-9/])
+RewriteRule ^(.*)$ index.html [L]
+RewriteCond $1 !^(index.php|clientdir|system|application)
+RewriteRule ^(.*)$ index.html/$1 [L]
