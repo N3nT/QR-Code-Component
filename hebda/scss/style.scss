@@ -1,0 +1,103 @@
+@use "colors" as *;
+*{
+    box-sizing: border-box;
+    padding: none;
+    margin: none;
+    font-family: "Montserrat", serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.bck_video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -99;
+}
+.wrapper{
+    height: 600px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    background-color: rgba($color: #202020, $alpha: .95);
+    &_img{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+    }
+    &_heading{
+        color: white;
+    }
+    &_links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    &_link{
+        width: 80%;
+        height: 50px;
+        padding: 5px;
+        margin: 10px;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s ease-in;
+        cursor: pointer;
+        &--lastsong{
+            width: 90%;
+            height: 60px;
+            line-height: 50px;
+            font-size: 18px;
+            background-color: $bg-lastsong;
+            color: #202020;
+            &:hover{
+                background-color: $bg-h-lastsong;
+            }
+        }
+        &--spoti{
+            background-color: $bg-spotify;
+            &:hover{
+                background-color: $bg-h-spotify;
+            }
+        }
+        &--youtube{
+            background-color: $bg-youtube;
+            &:hover{
+                background-color: $bg-h-youtube;
+            }
+        }
+        &--insta{
+            background-color: $bg-instagram;
+            &:hover{
+                background-color: $bg-h-instagram;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    body{
+        background-image: url("../assets/bck.png");
+        background-position: center;
+        background-size: cover;
+    }
+    .bck_video{
+        display: none;
+    }
+}
